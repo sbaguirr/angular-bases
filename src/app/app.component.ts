@@ -6,5 +6,20 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'bases';
+  public title: string = 'Hola Mundo';
+  public counter: number  = 10;
+
+  increasyBy(value: string ):void{
+    if(value=='inc'){
+        this.counter += 1;
+    }
+    else
+    {
+      this.counter -=1;
+    }
+  }
+
+  reset():void{
+    this.counter= 10;
+  }
 }
